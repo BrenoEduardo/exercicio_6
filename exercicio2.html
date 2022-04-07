@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title> 
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        function HoraAtual(){
+            var horaAtual = new Date();
+           // return <p>{(horaAtual.getHours() < 10) ? "0" + horaAtual.getHours() : horaAtual.getHours()}:{(horaAtual.getMinutes() < 10) ? "0" + 
+           //        horaAtual.getMinutes() : horaAtual.getMinutes()}:{(horaAtual.getSeconds() < 10) ? "0" + horaAtual.getSeconds() : horaAtual.getSeconds()}</p>
+           return <p>{horaAtual.toLocaleTimeString()}</p>
+        }
+        ReactDOM.render(<HoraAtual/>,document.getElementById("root"))
+    </script>
+</body>
+</html>
